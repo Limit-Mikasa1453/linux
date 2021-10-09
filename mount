@@ -8,8 +8,9 @@ $ mkdir -p /media/flasdisk (biar rapi buat repo di /media)
 
   pilih salah satu
 $ mount /dev/[device_name] /media/[nama_folder_maunt] 
-$ sudo mount -o rw /dev/sdb1 /media/[name_mount_pount] [read write]
 $ sudo mount -o ro /dev/sdb1 /media/[name_mount_pount] [read only]
+$ sudo mount -o rw /dev/sdb1 /media/[name_mount_pount] [read write
+
 
 =====================
   UMOUNT 
@@ -17,14 +18,20 @@ $ sudo mount -o ro /dev/sdb1 /media/[name_mount_pount] [read only]
 $ umount /media/[name_mount_pount]
 
 note : buat temen mau mount hdd read-only padahal sudah dibuat mount
-  bisa jadi karan pc anda terdatap dual boot sehingga shutdown dulu terus coba lagi. 
+  bisa jadi karan pc anda terdatap dual boot sehingga shutdown dulu terus coba lagi
   
-  disini case saya mau copy file dari hdd yg sudah di mount tapi ke desible padahal sudah open folder in root.
+  ni case saya mau copy file dari hdd yg sudah di mount tapi ke desible padahal sudah open folder in root.
   saya juga aneh dengan mount tsb kadang bisa copy file (mount rw) kadang gw bisa (mount ro). dan ternyata
   partisi yang kita mount masih terbaca di os lain dalam kasus ini drive saya masih terbaca oleh windows (jadi kek proses gantung diri wkwk) 
   karna saya pakai dual boot satu windows satu nya lagi linux. nah caranya adalah shutdwon trus try again . nice try.
   
-  thank you
+  kalau cara diatas tetap tidak bisa kalian bisa coba cara dibawah ini
+  
+$ sudo ntfsfix /dev/sdb1
+$ umount /media/[name_mount_pount]
+$ sudo mount -o rw /dev/sdb1 /media/[name_mount_pount]
+
+jika cara diatas tidak ada keterangan error maka mount rw anda berhasil. thank you
   
   
   
