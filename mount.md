@@ -1,4 +1,4 @@
-# MOUNT 
+# :sparkles: MOUNT 
 ### cek nama drive
 ```ruby
 $ sudo fdisk -l 
@@ -21,7 +21,7 @@ $ sudo mount -o ro /dev/sdb1 /media/<name_mount_point>
 $ sudo mount -o rw /dev/sdb1 /media/<name_mount_point> 
 ```
 
-# UMOUNT 
+# :sparkles:UMOUNT 
 ```ruby
 $ umount /media/<name_mount_pount>
 ```
