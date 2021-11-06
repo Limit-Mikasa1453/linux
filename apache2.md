@@ -8,7 +8,7 @@ $ sudo service apache2 stop
 $ sudo apt-get purge apache2
 $ sudo apt-get autoremove
 ```
-lankah diatas sudah berhasil uninsatll namun jika ingin memastikan file yang berkaitan dengan apache2 itu telah bersi dihapus dengan cara menggunakan whereis
+lankah diatas sudah berhasil uninsatll namun jika ingin memastikan file yang berkaitan dengan `apache2` itu telah bersi dihapus dengan cara menggunakan `whereis`
 ```ruby
 $ whereis apache2
 ```
